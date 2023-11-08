@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora_Grupo I</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="calculadora">
+            <form>
+                <div class="visor">
+                    <input type="text" name="visor">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="visor.value = ''" class="borrador">
+                    <input type="button" value="DE" onclick="visor.value = visor.value.toString().slice(0,-1)" class="borrador">
+                    <input type="button" value="00" onclick="visor.value += '00'">
+                    <input type="button" value="/" onclick="visor.value += '/'" class="operadores">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="visor.value += '7'">
+                    <input type="button" value="8" onclick="visor.value += '8'">
+                    <input type="button" value="9" onclick="visor.value += '9'">
+                    <input type="button" value="*" onclick="visor.value += '*'" class="operadores">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="visor.value += '4'">
+                    <input type="button" value="5" onclick="visor.value += '5'">
+                    <input type="button" value="6" onclick="visor.value += '6'">
+                    <input type="button" value="-" onclick="visor.value += '-'" class="operadores">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="visor.value += '1'">
+                    <input type="button" value="2" onclick="visor.value += '2'">
+                    <input type="button" value="3" onclick="visor.value += '3'">
+                    <input type="button" value="+" onclick="visor.value += '+'" class="operadores">
+                </div>
+                <div>
+                    <input type="button" value="0" onclick="visor.value += '0'">
+                    <input type="button" value="." onclick="visor.value += '.'">
+                    <input type="button" value="=" onclick="visor.value = eval(visor.value)" class="resultado">
+                </div>
+            </form>
+        </div>
+    </div>    
+</body>
+</html>
